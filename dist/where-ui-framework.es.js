@@ -1,5 +1,5 @@
-import re from "react";
-var R = { exports: {} }, E = {};
+import te from "react";
+var p = { exports: {} }, E = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -10,11 +10,11 @@ var R = { exports: {} }, E = {};
  * LICENSE file in the root directory of this source tree.
  */
 var $;
-function te() {
+function re() {
   if ($) return E;
   $ = 1;
-  var c = Symbol.for("react.transitional.element"), r = Symbol.for("react.fragment");
-  function t(n, a, o) {
+  var c = Symbol.for("react.transitional.element"), t = Symbol.for("react.fragment");
+  function r(n, a, o) {
     var f = null;
     if (o !== void 0 && (f = "" + o), a.key !== void 0 && (f = "" + a.key), "key" in a) {
       o = {};
@@ -29,9 +29,9 @@ function te() {
       props: o
     };
   }
-  return E.Fragment = r, E.jsx = t, E.jsxs = t, E;
+  return E.Fragment = t, E.jsx = r, E.jsxs = r, E;
 }
-var m = {};
+var v = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -50,7 +50,7 @@ function ne() {
         return e.$$typeof === Z ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case _:
+        case R:
           return "Fragment";
         case J:
           return "Profiler";
@@ -78,7 +78,7 @@ function ne() {
             return e = e.displayName, e || (e = s.displayName || s.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case X:
             return s = e.displayName || null, s !== null ? s : c(e.type) || "Memo";
-          case p:
+          case g:
             s = e._payload, e = e._init;
             try {
               return c(e(s));
@@ -87,12 +87,12 @@ function ne() {
         }
       return null;
     }
-    function r(e) {
+    function t(e) {
       return "" + e;
     }
-    function t(e) {
+    function r(e) {
       try {
-        r(e);
+        t(e);
         var s = !1;
       } catch {
         s = !0;
@@ -104,12 +104,12 @@ function ne() {
           s,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           l
-        ), r(e);
+        ), t(e);
       }
     }
     function n(e) {
-      if (e === _) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === p)
+      if (e === R) return "<>";
+      if (typeof e == "object" && e !== null && e.$$typeof === g)
         return "<...>";
       try {
         var s = c(e);
@@ -119,7 +119,7 @@ function ne() {
       }
     }
     function a() {
-      var e = g.A;
+      var e = _.A;
       return e === null ? null : e.getOwner();
     }
     function o() {
@@ -189,13 +189,13 @@ function ne() {
         if (l)
           if (Q(u)) {
             for (l = 0; l < u.length; l++)
-              P(u[l]);
+              A(u[l]);
             Object.freeze && Object.freeze(u);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else P(u);
+        else A(u);
       if (j.call(s, "key")) {
         u = c(e);
         var d = Object.keys(s).filter(function(ee) {
@@ -214,7 +214,7 @@ React keys must be passed directly to JSX without using spread:
           u
         ), Y[u + l] = !0);
       }
-      if (u = null, i !== void 0 && (t(i), u = "" + i), f(s) && (t(s.key), u = "" + s.key), "key" in s) {
+      if (u = null, i !== void 0 && (r(i), u = "" + i), f(s) && (r(s.key), u = "" + s.key), "key" in s) {
         i = {};
         for (var y in s)
           y !== "key" && (i[y] = s[y]);
@@ -231,26 +231,26 @@ React keys must be passed directly to JSX without using spread:
         S
       );
     }
-    function P(e) {
-      A(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === p && (e._payload.status === "fulfilled" ? A(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
-    }
     function A(e) {
+      P(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === g && (e._payload.status === "fulfilled" ? P(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
+    }
+    function P(e) {
       return typeof e == "object" && e !== null && e.$$typeof === k;
     }
-    var v = re, k = Symbol.for("react.transitional.element"), L = Symbol.for("react.portal"), _ = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), J = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), z = Symbol.for("react.context"), G = Symbol.for("react.forward_ref"), H = Symbol.for("react.suspense"), K = Symbol.for("react.suspense_list"), X = Symbol.for("react.memo"), p = Symbol.for("react.lazy"), B = Symbol.for("react.activity"), Z = Symbol.for("react.client.reference"), g = v.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, j = Object.prototype.hasOwnProperty, Q = Array.isArray, T = console.createTask ? console.createTask : function() {
+    var m = te, k = Symbol.for("react.transitional.element"), L = Symbol.for("react.portal"), R = Symbol.for("react.fragment"), M = Symbol.for("react.strict_mode"), J = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), z = Symbol.for("react.context"), G = Symbol.for("react.forward_ref"), H = Symbol.for("react.suspense"), K = Symbol.for("react.suspense_list"), X = Symbol.for("react.memo"), g = Symbol.for("react.lazy"), B = Symbol.for("react.activity"), Z = Symbol.for("react.client.reference"), _ = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, j = Object.prototype.hasOwnProperty, Q = Array.isArray, T = console.createTask ? console.createTask : function() {
       return null;
     };
-    v = {
+    m = {
       react_stack_bottom_frame: function(e) {
         return e();
       }
     };
-    var x, C = {}, N = v.react_stack_bottom_frame.bind(
-      v,
+    var x, C = {}, N = m.react_stack_bottom_frame.bind(
+      m,
       o
     )(), U = T(n(o)), Y = {};
-    m.Fragment = _, m.jsx = function(e, s, i) {
-      var l = 1e4 > g.recentlyCreatedOwnerStacks++;
+    v.Fragment = R, v.jsx = function(e, s, i) {
+      var l = 1e4 > _.recentlyCreatedOwnerStacks++;
       return w(
         e,
         s,
@@ -259,8 +259,8 @@ React keys must be passed directly to JSX without using spread:
         l ? Error("react-stack-top-frame") : N,
         l ? T(n(e)) : U
       );
-    }, m.jsxs = function(e, s, i) {
-      var l = 1e4 > g.recentlyCreatedOwnerStacks++;
+    }, v.jsxs = function(e, s, i) {
+      var l = 1e4 > _.recentlyCreatedOwnerStacks++;
       return w(
         e,
         s,
@@ -270,18 +270,18 @@ React keys must be passed directly to JSX without using spread:
         l ? T(n(e)) : U
       );
     };
-  })()), m;
+  })()), v;
 }
 var W;
 function se() {
-  return W || (W = 1, process.env.NODE_ENV === "production" ? R.exports = te() : R.exports = ne()), R.exports;
+  return W || (W = 1, process.env.NODE_ENV === "production" ? p.exports = re() : p.exports = ne()), p.exports;
 }
 var O = se();
-function le({ children: c, onClick: r }) {
-  return /* @__PURE__ */ O.jsx("button", { onClick: r, children: c });
+function le({ children: c, onClick: t }) {
+  return /* @__PURE__ */ O.jsx("button", { onClick: t, children: c });
 }
-function ue({ children: c, onClick: r }) {
-  return /* @__PURE__ */ O.jsx("span", { onClick: r, children: /* @__PURE__ */ O.jsx("b", { children: c }) });
+function ue({ children: c, onClick: t }) {
+  return /* @__PURE__ */ O.jsx("span", { onClick: t, children: /* @__PURE__ */ O.jsx("b", { children: c }) });
 }
 class ce {
   constructor() {
@@ -293,10 +293,10 @@ class ce {
    * @param {json} params any of the parameters
    * @returns promise
    */
-  async get(r, t) {
-    let n = this.buildUrl(r);
+  async get(t, r) {
+    let n = this.buildUrl(t);
     const a = this.getRequestHeaders();
-    t && (n = n + "/" + t);
+    r && (n = n + "/" + r);
     try {
       const o = await fetch(n, {
         method: "GET",
@@ -311,12 +311,12 @@ class ce {
     }
   }
   getRequestHeaders() {
-    const r = {
+    const t = {
       "Content-Type": "application/json"
     };
-    return this.authToken && (r.Authorization = "Bearer " + this.authToken), r;
+    return this.authToken && (t.Authorization = "Bearer " + this.authToken), t;
   }
-  async getblob(r, t) {
+  async getblob(t, r) {
   }
   /**
    * 
@@ -324,52 +324,52 @@ class ce {
    * @param {object} data to be passed
    * @returns promise
    */
-  async post(r, t) {
-    let n = this.buildUrl(r);
+  async post(t, r) {
+    let n = this.buildUrl(t);
     const a = this.getRequestHeaders();
     try {
       const o = await fetch(n, {
         method: "POST",
         headers: a,
-        body: JSON.stringify(t)
+        body: JSON.stringify(r)
       });
     } catch (o) {
       console.error("Error fetching data:", o);
     }
   }
-  async postDataWithFiles(r, t, n, a) {
-    this.buildUrl(r);
+  async postDataWithFiles(t, r, n, a) {
+    this.buildUrl(t);
     try {
       const f = new FormData();
-      for (var o = 0; o < t.length; o++)
-        f.append("file" + o, t[o]);
-      return f.append(n, JSON.stringify(a)), await this.post(r, f);
+      for (var o = 0; o < r.length; o++)
+        f.append("file" + o, r[o]);
+      return f.append(n, JSON.stringify(a)), await this.post(t, f);
     } catch {
       return null;
     }
   }
-  setControllerPath(r, t, n) {
-    this.controllerPath = r, this.isRelativePath = t, this.authToken = n;
+  setControllerPath(t, r, n) {
+    this.controllerPath = t, this.isRelativePath = r, this.authToken = n;
   }
-  buildUrl(r) {
-    return `${this.controllerPath}/${r}`;
+  buildUrl(t) {
+    return `${this.controllerPath}/${t}`;
   }
 }
 class ae {
   constructor() {
     this.dict = new Object();
   }
-  builtFromArray(r, t) {
-    for (let n = 0; n < r.length; n++)
-      this.add(r[n], t[n]);
+  builtFromArray(t, r) {
+    for (let n = 0; n < t.length; n++)
+      this.add(t[n], r[n]);
   }
   /**
    * Adds any object to the dictionary. If Object already exists this mehtod sets the new object to exisitng key
    * @param {string} key 
    * @param {object} value 
    */
-  add(r, t) {
-    this.dict[r] = t;
+  add(t, r) {
+    this.dict[t] = r;
   }
   /**
    * this method same as as add except that method do not add or set the new object if the key already exists
@@ -377,14 +377,14 @@ class ae {
    * @param {object} value 
    * @returns 
    */
-  addExclusive(r, t) {
-    this.get(r) || this.add(r, t);
+  addExclusive(t, r) {
+    this.get(t) || this.add(t, r);
   }
-  get(r) {
-    return this.dict[r];
+  get(t) {
+    return this.dict[t];
   }
-  hasKey(r) {
-    return !!this.dict[r];
+  hasKey(t) {
+    return !!this.dict[t];
   }
   getKeys() {
     return Object.keys(this.dict);
@@ -392,70 +392,76 @@ class ae {
   getValuesAsArray() {
     return Object.values(this.dict);
   }
-  destroy(r) {
-    this.hasKey(r) && (this.dict[r] = null);
+  destroy(t) {
+    this.hasKey(t) && (this.dict[t] = null);
   }
-  setOrAdd(r, t) {
-    this.hasKey(r) ? this.dict[r] = t : this.add(r, t);
+  setOrAdd(t, r) {
+    this.hasKey(t) ? this.dict[t] = r : this.add(t, r);
   }
 }
 class D {
   constructor() {
     this.dict = new ae();
   }
-  add(r, t) {
-    if (this.dict.hasKey(r)) {
-      this.dict.get(r).push(t);
+  add(t, r) {
+    if (this.dict.hasKey(t)) {
+      this.dict.get(t).push(r);
       return;
     }
     let n = [];
-    n.push(t), this.dict.add(r, n);
+    n.push(r), this.dict.add(t, n);
   }
-  get(r) {
-    return this.dict.get(r);
+  get(t) {
+    return this.dict.get(t);
   }
   getKeys() {
     return this.dict.getKeys();
   }
-  remove(r) {
-    this.dict.destroy(r);
+  remove(t) {
+    this.dict.destroy(t);
   }
 }
 class oe {
   constructor() {
     this.EventStore = new D(), this.UnRegisteredEventStore = new D();
   }
-  registerForEvent(r, t) {
-    this.EventStore.add(r, { eventName: r, callback: t, tag: "", disabled: !1 });
-    let n = this.UnRegisteredEventStore.get(r);
-    n && (t(n.eventData), this.UnRegisteredEventStore.remove(r));
+  registerForEvent(t, r) {
+    this.EventStore.add(t, { eventName: t, callback: r, tag: "", disabled: !1 });
+    let n = this.UnRegisteredEventStore.get(t);
+    n && (r(n.eventData), this.UnRegisteredEventStore.remove(t));
   }
-  registerForEventWithTag(r, t, n) {
-    this.EventStore.add(r, { eventName: r, callback: t, tag: n, disabled: !1 });
-    let a = this.UnRegisteredEventStore.get(r);
-    a && (t(a.eventData), this.UnRegisteredEventStore.remove(r));
+  registerForEventWithTag(t, r, n) {
+    this.EventStore.add(t, { eventName: t, callback: r, tag: n, disabled: !1 });
+    let a = this.UnRegisteredEventStore.get(t);
+    a && (r(a.eventData), this.UnRegisteredEventStore.remove(t));
   }
-  raiseEvent(r, t) {
-    let n = this.EventStore.get(r);
+  raiseEvent(t, r) {
+    let n = this.EventStore.get(t);
     if (!n) {
-      if (!t)
+      if (!r)
         return;
-      t.shouldCallAfterClientRegister && this.UnRegisteredEventStore.add(r, { eventData: t });
+      r.shouldCallAfterClientRegister && this.UnRegisteredEventStore.add(t, { eventData: r });
       return;
     }
     for (let a = 0; a < n.length; a++)
-      n[a].disabled || n[a].callback(t, n[a]);
+      n[a].disabled || n[a].callback(r, n[a]);
   }
-  unregisterEvent(r, t) {
-    let n = this.EventStore.get(r);
+  unregisterEvent(t, r) {
+    let n = this.EventStore.get(t);
     if (n)
       for (let a = 0; a < n.length; a++)
-        n[a].tag === t && (n[a].disabled = !0);
+        n[a].tag === r && (n[a].disabled = !0);
   }
 }
 class fe {
   constructor() {
-    this.EventSystem = new oe();
+    this.EventSystem = new oe(), this.services = {}, this.AppConfig = {};
+  }
+  initApp(t) {
+  }
+  afterInitConfig() {
+  }
+  updateServices() {
   }
 }
 class de {
