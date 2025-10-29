@@ -5,6 +5,8 @@ import { WhereSystem } from "./System/WhereSystem";
 import {WhereCollection} from "./Utils/WhereCollections"
 import {WhereDictionary} from "./Utils/WhereDictionary"
 import { TestSys } from "./System/TestSys";
+import { WhereEventNames } from "./EventSystem/WhereEventNames";
+import { MessageBox } from "./Components/MessageBox";
 
 export {TestSys}
 export { Button }
@@ -13,3 +15,5 @@ export {SmartText}
 export {WhereSystem}
 export {WhereCollection}
 export {WhereDictionary}
+export {WhereEventNames}
+export {MessageBox}

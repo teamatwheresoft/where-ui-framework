@@ -1,5 +1,5 @@
 import te from "react";
-var h = { exports: {} }, T = {};
+var O = { exports: {} }, T = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -50,7 +50,7 @@ function ae() {
         return e.$$typeof === Q ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case R:
+        case h:
           return "Fragment";
         case $:
           return "Profiler";
@@ -78,7 +78,7 @@ function ae() {
             return e = e.displayName, e || (e = o.displayName || o.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case K:
             return o = e.displayName || null, o !== null ? o : u(e.type) || "Memo";
-          case S:
+          case R:
             o = e._payload, e = e._init;
             try {
               return u(e(o));
@@ -108,8 +108,8 @@ function ae() {
       }
     }
     function a(e) {
-      if (e === R) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === S)
+      if (e === h) return "<>";
+      if (typeof e == "object" && e !== null && e.$$typeof === R)
         return "<...>";
       try {
         var o = u(e);
@@ -119,7 +119,7 @@ function ae() {
       }
     }
     function n() {
-      var e = m.A;
+      var e = S.A;
       return e === null ? null : e.getOwner();
     }
     function s() {
@@ -150,7 +150,7 @@ function ae() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function F(e, o, i, l, A, C) {
+    function F(e, o, i, l, A, v) {
       var c = i.ref;
       return e = {
         $$typeof: P,
@@ -180,10 +180,10 @@ function ae() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: C
+        value: v
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function L(e, o, i, l, A, C) {
+    function L(e, o, i, l, A, v) {
       var c = o.children;
       if (c !== void 0)
         if (l)
@@ -216,8 +216,8 @@ React keys must be passed directly to JSX without using spread:
       }
       if (c = null, i !== void 0 && (r(i), c = "" + i), E(o) && (r(o.key), c = "" + o.key), "key" in o) {
         i = {};
-        for (var p in o)
-          p !== "key" && (i[p] = o[p]);
+        for (var C in o)
+          C !== "key" && (i[C] = o[C]);
       } else i = o;
       return c && _(
         i,
@@ -228,16 +228,16 @@ React keys must be passed directly to JSX without using spread:
         i,
         n(),
         A,
-        C
+        v
       );
     }
     function b(e) {
-      G(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === S && (e._payload.status === "fulfilled" ? G(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
+      G(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === R && (e._payload.status === "fulfilled" ? G(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
     }
     function G(e) {
       return typeof e == "object" && e !== null && e.$$typeof === P;
     }
-    var g = te, P = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), R = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), $ = Symbol.for("react.profiler"), B = Symbol.for("react.consumer"), H = Symbol.for("react.context"), J = Symbol.for("react.forward_ref"), q = Symbol.for("react.suspense"), z = Symbol.for("react.suspense_list"), K = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), X = Symbol.for("react.activity"), Q = Symbol.for("react.client.reference"), m = g.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, D = Object.prototype.hasOwnProperty, Z = Array.isArray, v = console.createTask ? console.createTask : function() {
+    var g = te, P = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), h = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), $ = Symbol.for("react.profiler"), B = Symbol.for("react.consumer"), H = Symbol.for("react.context"), J = Symbol.for("react.forward_ref"), q = Symbol.for("react.suspense"), z = Symbol.for("react.suspense_list"), K = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), X = Symbol.for("react.activity"), Q = Symbol.for("react.client.reference"), S = g.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, D = Object.prototype.hasOwnProperty, Z = Array.isArray, m = console.createTask ? console.createTask : function() {
       return null;
     };
     g = {
@@ -248,40 +248,40 @@ React keys must be passed directly to JSX without using spread:
     var I, N = {}, y = g.react_stack_bottom_frame.bind(
       g,
       s
-    )(), w = v(a(s)), j = {};
-    f.Fragment = R, f.jsx = function(e, o, i) {
-      var l = 1e4 > m.recentlyCreatedOwnerStacks++;
+    )(), w = m(a(s)), j = {};
+    f.Fragment = h, f.jsx = function(e, o, i) {
+      var l = 1e4 > S.recentlyCreatedOwnerStacks++;
       return L(
         e,
         o,
         i,
         !1,
         l ? Error("react-stack-top-frame") : y,
-        l ? v(a(e)) : w
+        l ? m(a(e)) : w
       );
     }, f.jsxs = function(e, o, i) {
-      var l = 1e4 > m.recentlyCreatedOwnerStacks++;
+      var l = 1e4 > S.recentlyCreatedOwnerStacks++;
       return L(
         e,
         o,
         i,
         !0,
         l ? Error("react-stack-top-frame") : y,
-        l ? v(a(e)) : w
+        l ? m(a(e)) : w
       );
     };
   })()), f;
 }
 var U;
 function oe() {
-  return U || (U = 1, process.env.NODE_ENV === "production" ? h.exports = re() : h.exports = ae()), h.exports;
+  return U || (U = 1, process.env.NODE_ENV === "production" ? O.exports = re() : O.exports = ae()), O.exports;
 }
-var O = oe();
+var p = oe();
 function le({ children: u, onClick: t }) {
-  return /* @__PURE__ */ O.jsx("button", { onClick: t, children: u });
+  return /* @__PURE__ */ p.jsx("button", { onClick: t, children: u });
 }
 function ce({ children: u, onClick: t }) {
-  return /* @__PURE__ */ O.jsx("span", { onClick: t, children: /* @__PURE__ */ O.jsx("b", { children: u }) });
+  return /* @__PURE__ */ p.jsx("span", { onClick: t, children: /* @__PURE__ */ p.jsx("b", { children: u }) });
 }
 class ue {
   constructor() {
@@ -538,12 +538,8 @@ const _e = {
   TOGGLE_PREPARE_TRAINING: "togglePrepareTraining",
   TOGGLE_AI_CLONED_PROJECT: "toggleAIClonedProject"
 };
-function Te({ children: u, onClick: t }) {
-  return /* @__PURE__ */ O.jsx("div", { children: "s" });
-}
 export {
   le as Button,
-  Te as MessageBox,
   ce as SmartText,
   de as TestSys,
   W as WhereCollection,

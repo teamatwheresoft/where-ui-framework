@@ -1,4 +1,4 @@
-const WhereEventNames = {
+export const WhereEventNames = {
     // Catalogue Events
     TOGGLE_ADD_CATALOGUE: "toggleAddCatalogue",
     TOGGLE_VIEW_CATALOGUE_LIST: "toggleViewCatalogueList",
@@ -81,4 +81,3 @@ const WhereEventNames = {
     TOGGLE_PREPARE_TRAINING: "togglePrepareTraining",
     TOGGLE_AI_CLONED_PROJECT: "toggleAIClonedProject",
 }
-export default WhereEventNames;

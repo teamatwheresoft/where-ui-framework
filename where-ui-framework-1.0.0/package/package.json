@@ -1,0 +1,32 @@
+{
+  "name": "where-ui-framework",
+  "version": "1.0.0",
+  "main": "dist/where-ui-framework.cjs.js",
+  "module": "dist/where-ui-framework.es.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamatwheresoft/where-ui-framework.git"
+  },
+  "keywords": [    
+    "UI",
+    "Framework"],
+  "author": "WhereSoft Technologies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamatwheresoft/where-open-react-map/issues"
+  },
+  "homepage": "https://github.com/teamatwheresoft/where-open-react-map#readme",
+  "description": "",
+  "peerDependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.3",
+    "vite": "^7.1.6"
+  }
+}
