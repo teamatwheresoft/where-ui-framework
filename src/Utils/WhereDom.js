@@ -1,4 +1,4 @@
-const WhereDom ={
+export const WhereDom ={
     downloadImageFile : function(data,fileName){
         this.downloadFile(data,fileName,"text/json");
     },
@@ -77,5 +77,3 @@ const WhereDom ={
     }
 
 }
-
-export default WhereDom;

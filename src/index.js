@@ -7,7 +7,7 @@ import {WhereDictionary} from "./Utils/WhereDictionary"
 import { TestSys } from "./System/TestSys";
 import { WhereEventNames } from "./EventSystem/WhereEventNames";
 import { MessageBox } from "./Components/MessageBox";
-
+import {WhereDom} from "./Utils/WhereDom"
 export {TestSys}
 export { Button }
 export {WhereService}
@@ -17,3 +17,4 @@ export {WhereCollection}
 export {WhereDictionary}
 export {WhereEventNames}
 export {MessageBox}
+export {WhereDom}
