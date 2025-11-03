@@ -69,7 +69,7 @@ export class WhereService {
                 headers: headers,
                 body: JSON.stringify(data),
             });
-            return response.json;
+            return await response.json();
         } catch (error) {
             console.error('Error fetching data:', error);
         }

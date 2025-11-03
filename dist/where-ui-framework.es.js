@@ -14,19 +14,19 @@ function re() {
   if (k) return _;
   k = 1;
   var s = Symbol.for("react.transitional.element"), t = Symbol.for("react.fragment");
-  function r(o, n, l) {
+  function r(o, n, i) {
     var E = null;
-    if (l !== void 0 && (E = "" + l), n.key !== void 0 && (E = "" + n.key), "key" in n) {
-      l = {};
+    if (i !== void 0 && (E = "" + i), n.key !== void 0 && (E = "" + n.key), "key" in n) {
+      i = {};
       for (var f in n)
-        f !== "key" && (l[f] = n[f]);
-    } else l = n;
-    return n = l.ref, {
+        f !== "key" && (i[f] = n[f]);
+    } else i = n;
+    return n = i.ref, {
       $$typeof: s,
       type: o,
       key: E,
       ref: n !== void 0 ? n : null,
-      props: l
+      props: i
     };
   }
   return _.Fragment = t, _.jsx = r, _.jsxs = r, _;
@@ -99,8 +99,8 @@ function oe() {
       }
       if (a) {
         a = console;
-        var i = a.error, c = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
-        return i.call(
+        var l = a.error, c = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        return l.call(
           a,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           c
@@ -122,7 +122,7 @@ function oe() {
       var e = m.A;
       return e === null ? null : e.getOwner();
     }
-    function l() {
+    function i() {
       return Error("react-stack-top-frame");
     }
     function E(e) {
@@ -133,14 +133,14 @@ function oe() {
       return e.key !== void 0;
     }
     function f(e, a) {
-      function i() {
+      function l() {
         D || (D = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           a
         ));
       }
-      i.isReactWarning = !0, Object.defineProperty(e, "key", {
-        get: i,
+      l.isReactWarning = !0, Object.defineProperty(e, "key", {
+        get: l,
         configurable: !0
       });
     }
@@ -150,13 +150,13 @@ function oe() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function W(e, a, i, c, h, p) {
-      var u = i.ref;
+    function W(e, a, l, c, h, p) {
+      var u = l.ref;
       return e = {
         $$typeof: w,
         type: e,
         key: a,
-        props: i,
+        props: l,
         _owner: c
       }, (u !== void 0 ? u : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
@@ -183,7 +183,7 @@ function oe() {
         value: p
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function L(e, a, i, c, h, p) {
+    function L(e, a, l, c, h, p) {
       var u = a.children;
       if (u !== void 0)
         if (c)
@@ -214,18 +214,18 @@ React keys must be passed directly to JSX without using spread:
           u
         ), j[u + c] = !0);
       }
-      if (u = null, i !== void 0 && (r(i), u = "" + i), E(a) && (r(a.key), u = "" + a.key), "key" in a) {
-        i = {};
+      if (u = null, l !== void 0 && (r(l), u = "" + l), E(a) && (r(a.key), u = "" + a.key), "key" in a) {
+        l = {};
         for (var C in a)
-          C !== "key" && (i[C] = a[C]);
-      } else i = a;
+          C !== "key" && (l[C] = a[C]);
+      } else l = a;
       return u && f(
-        i,
+        l,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), W(
         e,
         u,
-        i,
+        l,
         n(),
         h,
         p
@@ -247,24 +247,24 @@ React keys must be passed directly to JSX without using spread:
     };
     var D, I = {}, N = g.react_stack_bottom_frame.bind(
       g,
-      l
-    )(), y = v(o(l)), j = {};
-    T.Fragment = R, T.jsx = function(e, a, i) {
+      i
+    )(), y = v(o(i)), j = {};
+    T.Fragment = R, T.jsx = function(e, a, l) {
       var c = 1e4 > m.recentlyCreatedOwnerStacks++;
       return L(
         e,
         a,
-        i,
+        l,
         !1,
         c ? Error("react-stack-top-frame") : N,
         c ? v(o(e)) : y
       );
-    }, T.jsxs = function(e, a, i) {
+    }, T.jsxs = function(e, a, l) {
       var c = 1e4 > m.recentlyCreatedOwnerStacks++;
       return L(
         e,
         a,
-        i,
+        l,
         !0,
         c ? Error("react-stack-top-frame") : N,
         c ? v(o(e)) : y
@@ -277,7 +277,7 @@ function ne() {
   return U || (U = 1, process.env.NODE_ENV === "production" ? A.exports = re() : A.exports = oe()), A.exports;
 }
 var O = ne();
-function ie({ children: s, onClick: t }) {
+function le({ children: s, onClick: t }) {
   return /* @__PURE__ */ O.jsx("button", { onClick: t, children: s });
 }
 function ce({ children: s, onClick: t }) {
@@ -298,16 +298,16 @@ class ue {
     const n = this.getRequestHeaders();
     r && (o = o + "/" + r);
     try {
-      const l = await fetch(o, {
+      const i = await fetch(o, {
         method: "GET",
         // Or 'POST', 'PUT', 'DELETE', etc.
         headers: n
       });
-      if (!l.ok)
-        throw new Error(`HTTP error! status: ${l.status}`);
-      return await l.json();
-    } catch (l) {
-      console.error("Error fetching data:", l);
+      if (!i.ok)
+        throw new Error(`HTTP error! status: ${i.status}`);
+      return await i.json();
+    } catch (i) {
+      console.error("Error fetching data:", i);
     }
   }
   getRequestHeaders() {
@@ -328,21 +328,21 @@ class ue {
     let o = this.buildUrl(t);
     const n = this.getRequestHeaders();
     try {
-      return (await fetch(o, {
+      return await (await fetch(o, {
         method: "POST",
         headers: n,
         body: JSON.stringify(r)
-      })).json;
-    } catch (l) {
-      console.error("Error fetching data:", l);
+      })).json();
+    } catch (i) {
+      console.error("Error fetching data:", i);
     }
   }
   async postDataWithFiles(t, r, o, n) {
     this.buildUrl(t);
     try {
       const E = new FormData();
-      for (var l = 0; l < r.length; l++)
-        E.append("file" + l, r[l]);
+      for (var i = 0; i < r.length; i++)
+        E.append("file" + i, r[i]);
       return E.append(o, JSON.stringify(n)), await this.post(t, E);
     } catch {
       return null;
@@ -549,8 +549,8 @@ const Te = {
     this.downloadFile(s, t, "text/json");
   },
   downloadFile: function(s, t, r) {
-    var o = new Blob([s], { type: r }), n = document.createEvent("MouseEvents"), l = document.createElement("a");
-    l.download = t, l.href = window.URL.createObjectURL(o), l.dataset.downloadurl = [r, l.download, l.href].join(":"), n.initMouseEvent("click", !0, !1, window, 0, 0, 0, 0, 0, !1, !1, !1, !1, 0, null), l.dispatchEvent(n);
+    var o = new Blob([s], { type: r }), n = document.createEvent("MouseEvents"), i = document.createElement("a");
+    i.download = t, i.href = window.URL.createObjectURL(o), i.dataset.downloadurl = [r, i.download, i.href].join(":"), n.initMouseEvent("click", !0, !1, window, 0, 0, 0, 0, 0, !1, !1, !1, !1, 0, null), i.dispatchEvent(n);
   },
   downloadUrl: function(s) {
     let t = document.createEvent("MouseEvents"), r = document.createElement("a");
@@ -576,7 +576,7 @@ const Te = {
   }
 };
 export {
-  ie as Button,
+  le as Button,
   _e as MessageBox,
   ce as SmartText,
   de as TestSys,
