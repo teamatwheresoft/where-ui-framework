@@ -1,6 +1,6 @@
 {
   "name": "where-ui-framework",
-  "version": "1.0.12",
+  "version": "1.0.1",
   "main": "dist/where-ui-framework.cjs.js",
   "module": "dist/where-ui-framework.es.js",
   "files": ["dist"],

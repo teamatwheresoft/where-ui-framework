@@ -328,11 +328,11 @@ class ue {
     let o = this.buildUrl(t);
     const n = this.getRequestHeaders();
     try {
-      return await fetch(o, {
+      return (await fetch(o, {
         method: "POST",
         headers: n,
         body: JSON.stringify(r)
-      });
+      })).json;
     } catch (l) {
       console.error("Error fetching data:", l);
     }
