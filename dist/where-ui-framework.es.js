@@ -328,7 +328,7 @@ class ue {
     let o = this.buildUrl(t);
     const n = this.getRequestHeaders();
     try {
-      const l = await fetch(o, {
+      return await fetch(o, {
         method: "POST",
         headers: n,
         body: JSON.stringify(r)

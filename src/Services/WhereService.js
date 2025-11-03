@@ -69,10 +69,11 @@ export class WhereService {
                 headers: headers,
                 body: JSON.stringify(data),
             });
+            return response;
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-
+        
     }
 
     async postDataWithFiles(methodName, files, dataKey, data) {
